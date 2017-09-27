@@ -8,11 +8,11 @@ app = Flask(__name__)
 def hello_world():
 	return 'Hello, World!'
 
-FIRST_OPERAND = 'a'
-SECOND_OPERAND = 'b'
+FIRST_OPER = 'a'
+SECOND_OPER = 'b'
 
 def parse_operand(req):
-	return (int(req.args.get(FIRST_OPERAND)), int(req.args.get(SECOND_OPERAND)))
+	return (int(req.args.get(FIRST_OPER)), int(req.args.get(SECOND_OPER)))
 
 @app.route('/add')
 def add():
