@@ -1,19 +1,21 @@
 import tweepy
 
-consumer_key = 'G9JzFD2FymO3h5dpvG52zKe5H'
-consumer_secret = 'CyRqDLpi2fW7ttCsfGBusLH5oJdXlaRBD4zUpFr2v010nMnTEN'
+def crawling_twitter_mention() :
 
-access_token = '208308487-ezP0oQxgDPc36btkQkDoAN1hWOBUi8HYEElTn5ES'
-access_token_secret = 'uqXgze2pfJQVIOEMnxcTZNKzlT2Yt1GQWARSu6SJUOqP4'
+	consumer_key = 'G9JzFD2FymO3h5dpvG52zKe5H'
+	consumer_secret = 'CyRqDLpi2fW7ttCsfGBusLH5oJdXlaRBD4zUpFr2v010nMnTEN'
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+	access_token = '208308487-ezP0oQxgDPc36btkQkDoAN1hWOBUi8HYEElTn5ES'
+	access_token_secret = 'uqXgze2pfJQVIOEMnxcTZNKzlT2Yt1GQWARSu6SJUOqP4'
 
-api = tweepy.API(auth)
+	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+	auth.set_access_token(access_token, access_token_secret)
 
-search_keyword = '무뚝뚝감자칩'
+	api = tweepy.API(auth)
 
-tweets = api.search(search_keyword)
-for tweet in tweets:
-    print(tweet.text)
+	search_keyword = '무뚝뚝감자칩'
+
+	tweets = api.search(search_keyword)
+
+	return tweets
 
